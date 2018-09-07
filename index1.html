@@ -1,3 +1,8 @@
+Skip to content
+ 
+Search or jump to…
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,7 +41,6 @@
         body, h1 {
             font-family: "Raleway", sans-serif
         }
-
         body, html {
             height: 100%
         }
@@ -44,14 +48,12 @@
           left:0;
           top:0;
           position: absolute;
-
         }
         .button {
     background-color: #555555; /* Black*/
     border: none;
     color: white;
     padding: 15px 32px;
-
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
@@ -59,55 +61,42 @@
     right: 0;
     top: 0;
 }
-
-
         .body{
             width: available;
             height: available;
         }
-
         .container{
             width: available;
             height: available;
         }
-
         .leftpane{
             width: 25%;
             min-width: 350px;
             height: available;
             min-height: 400px;
             float: left;
-
             border-collapse: collapse;
         }
-
         .middlepane{
            width: 50%;
            min-width: 800px;
            height: available;
            min-height: 650px;
            float: left;
-
            border-collapse: collapse;
         }
-
         .rightpane{
             width: available;
             height: available;
             position: relative;
             margin-left: 75%;
-
             border-collapse: collapse;
         }
-
         .toppane{
             width: available;
             height: 100px;
             border-collapse: collapse;
-
         }
-
-
         .inputfile {
             width: 0.1px;
             height: 0.1px;
@@ -116,32 +105,26 @@
             position: absolute;
             z-index: -1;
         }
-
             .inputfile + label {
                 font-size: 1.25em;
                 font-weight: 700;
                 color: white;
                 display: inline;
             }
-
                 .inputfile:focus + label,
                 .inputfile + label:hover {
                     background-color: =white;
                 }
-
             .inputfile + label {
                 cursor: pointer; /* "hand" cursor */
             }
-
             .inputfile:focus + label {
                 outline: 1px dotted #000;
                 outline: -webkit-focus-ring-color auto 5px;
             }
-
             .inputfile + label * {
                 pointer-events: none;
             }
-
         @import url("http://fonts.googleapis.com/css?family=Gafata");
         /* Colors */
         /* Mixins */
@@ -151,7 +134,6 @@
             text-align: center;
             margin: 20px 0;
         }
-
         h1 {
             font-family: 'Gafata', 'Lucida Grande', Tahoma, Verdana, sans-serif;
             font-size: 2.1875rem;
@@ -159,7 +141,6 @@
             color: #A75F63;
             text-shadow: 0 1px 1px white;
         }
-
         .bubbles span {
             display: inline-block;
             vertical-align: middle;
@@ -172,16 +153,13 @@
             -webkit-border-radius: 50%;
             animation: bubbly .9s infinite alternate;
         }
-
         /* Bubbles */
         #bubble2 {
             animation-delay: .27s;
         }
-
         #bubble3 {
             animation-delay: .54s;
         }
-
         @-webkit-keyframes bubbly {
             0% {
                 width: 15px;
@@ -189,7 +167,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-
             100% {
                 width: 50px;
                 height: 50px;
@@ -197,7 +174,6 @@
                 transform: translateY(-32px);
             }
         }
-
         @-moz-keyframes bubbly {
             0% {
                 width: 15px;
@@ -205,7 +181,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-
             100% {
                 width: 50px;
                 height: 50px;
@@ -249,32 +224,34 @@
     </div>
     <div class="container">
             <div class="toppane">Test Page</div>
-            <div class="leftpane"><h1>Test Page</h1></div>
-            <div class="middlepane"></div>
-            <div class="rightpane"><h1>Test Page</h1></div>
+            <!--<div class="leftpane"><h1>Test Page</h1></div>
+            <div class="middlepane"></div>-->
+            <div class="middlepane"><h2>Tired of those multiple trial and error cycles to find out whats best for your data? We got this for you!</h2>
+			<p>
+
+Get instant results of what algorithm is to be applied to hit the highest accuracy rate.(in about 1% of the time that one would take to do it otherwise!)<br>
+Find the best parameter values to be set for the model suggested to be applied on the your dataset.<br>
+And a data visualization dashboard to see and compare the accuracies you might achieve through other algorithms, at the same time.<br>
+Get access to your own statistics and history of data files processed along with our results.<br>
+Also, get access to data cleansing through our partner services.<br>
+<br>
+<h4>Hence be all set to start working on the project. Happy Coding!<h4>
+</p></div>
 </div>
     <script src="scripts\base64.js"></script>
     <script>
         function result() {
             debugger;
             var file = document.getElementById("files").files[0];
-
             var e = document.getElementById("selectHeader");
             var columnName = e.options[e.selectedIndex].text;
-
             document.getElementById('id01').style.display = 'block';
-
             var base64File = document.querySelector("#base64").value;
-
             makeFileEntry(base64File, file.name, columnName);
-
             setTimeout(function () {
                 window.location.href = "results.html?" + fileId;
             }, 5000);
-
-
         }
-
         function extractHeader() {
             debugger;
             var dataFile = document.getElementById("files");
